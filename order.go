@@ -115,6 +115,7 @@ type Order struct {
 	NoteAttributes        []NoteAttribute  `json:"note_attributes,omitempty"`
 	DiscountCodes         []DiscountCode   `json:"discount_codes,omitempty"`
 	LineItems             []LineItem       `json:"line_items,omitempty"`
+	ShippingLine          ShippingLines    `json:"shipping_line,omitempty"`
 	ShippingLines         []ShippingLines  `json:"shipping_lines,omitempty"`
 	Transactions          []Transaction    `json:"transactions,omitempty"`
 	AppID                 int              `json:"app_id,omitempty"`
@@ -293,6 +294,7 @@ type ShippingLines struct {
 	DeliveryCategory              string           `json:"delivery_category,omitempty"`
 	CarrierIdentifier             string           `json:"carrier_identifier,omitempty"`
 	TaxLines                      []TaxLine        `json:"tax_lines,omitempty"`
+	Handle                        string           `json:"handle,omitempty"`
 }
 
 // UnmarshalJSON custom unmarshaller for ShippingLines implemented to handle requested_fulfillment_service_id being
