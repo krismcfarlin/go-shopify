@@ -115,7 +115,7 @@ type Order struct {
 	NoteAttributes        []NoteAttribute  `json:"note_attributes,omitempty"`
 	DiscountCodes         []DiscountCode   `json:"discount_codes,omitempty"`
 	LineItems             []LineItem       `json:"line_items,omitempty"`
-	ShippingLine          ShippingLines    `json:"shipping_line,omitempty"`
+	ShippingLine          *ShippingLines   `json:"shipping_line,omitempty"`
 	ShippingLines         []ShippingLines  `json:"shipping_lines,omitempty"`
 	Transactions          []Transaction    `json:"transactions,omitempty"`
 	AppID                 int              `json:"app_id,omitempty"`
