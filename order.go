@@ -65,6 +65,7 @@ type OrderListOptions struct {
 	ProcessedAtMin    time.Time `url:"processed_at_min,omitempty"`
 	ProcessedAtMax    time.Time `url:"processed_at_max,omitempty"`
 	Order             string    `url:"order,omitempty"`
+	Limit             string    `url:"limit,omitempty"`
 }
 
 // A struct of all available order cancel options.
